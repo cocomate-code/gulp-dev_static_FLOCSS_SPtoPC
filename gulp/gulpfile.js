@@ -12,6 +12,8 @@ const srcPath = {
 const distPath = {
   css: distBase + '/css/',
   img: distBase + '/images/',
+  html: distBase + '/**/*.html',
+  js: distBase + '/js/**/*.js'
 }
 
 // ローカルサーバー立ち上げ
@@ -93,6 +95,8 @@ const imgImagemin = () => {
 const watchFiles = () => {
   watch(srcPath.css, series(cssSass, browserSyncReload))
   watch(srcPath.img, series(imgImagemin, browserSyncReload))
+  watch(distPath.html, series(browserSyncReload))
+  watch(distPath.js, series(browserSyncReload))
 }
 
 // clean
