@@ -31,11 +31,13 @@ body {
 }
 
 // ホバー
-a {
+a,
+button {
   @include mq(md) {
     transition: .3s;
     &:hover {
       opacity: 0.7;
+      cursor: pointer;
     }
   }
 }

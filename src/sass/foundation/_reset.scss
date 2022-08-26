@@ -49,7 +49,6 @@ body {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
-
 a {
   text-decoration: none;
   color: inherit;
@@ -68,6 +67,11 @@ button,
 textarea,
 select {
   font: inherit;
+}
+button {
+  border: none;
+  padding: 0;
+  background-color: initial;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
