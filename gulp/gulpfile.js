@@ -58,7 +58,11 @@ const cssSass = () => {
       includePaths: ['src/sass'], // 相対パス省略
       outputStyle: 'expanded' // 出力形式をCSSの一般的な記法にする
     }))
-    .pipe(postcss([cssnext(browsers)])) // 最新CSS使用を先取り
+    .pipe(postcss([cssnext({
+      features: {
+        rem: false
+      }
+    },browsers)])) // 最新CSS使用を先取り
     .pipe(sourcemaps.write('./')) // ソースマップの出力先をcssファイルから見たパスに指定
     .pipe(dest(distPath.css)) // 
     .pipe(notify({ // エラー発生時のアラート出力
