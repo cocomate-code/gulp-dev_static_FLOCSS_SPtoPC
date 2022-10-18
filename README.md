@@ -19,6 +19,6 @@
 - jsはdist直下のjsファイルに直接記述する（圧縮なし）
 
 ## 備考
-- CSS設計はFLOCSS(https://github.com/hiloki/flocss)を採用
+- CSS設計はFLOCSS(https://github.com/hiloki/flocss )を採用
 - スマホファースト
 - rem記述を前提# gulp-dev_static_flocss_SPtoPC
