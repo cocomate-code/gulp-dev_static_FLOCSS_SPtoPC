@@ -60,7 +60,7 @@ const cssSass = () => {
     }))
     .pipe(postcss([cssnext({
       features: {
-        rem: false
+        rem: false // rem単位をpxに変換しない
       }
     },browsers)])) // 最新CSS使用を先取り
     .pipe(sourcemaps.write('./')) // ソースマップの出力先をcssファイルから見たパスに指定
@@ -89,7 +89,7 @@ const imgImagemin = () => {
       }]
     })],
     {
-      verbose: true
+      verbose: true // コンソールに圧縮率などを出力する
     }
   ))
   .pipe(dest(distPath.img))
@@ -106,8 +106,8 @@ const watchFiles = () => {
 // clean
 const del = require('del');
 const delPath = {
-	css: distBase + '/css/style.css',
-	cssMap: distBase + '/css/style.css.map',
+	css: distBase + '/css/styles.css',
+	cssMap: distBase + '/css/styles.css.map',
   img: distBase + '/images/',
 }
 const clean = (done) => {
